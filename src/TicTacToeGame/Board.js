@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import Square from './Square'
+ import Square from './Square'
+import "../App.css"
 
+  
 const Board = () => {
     const [state, setState] = useState(Array(9).fill(null))
     const [isXTurn, setIsXTurn] = useState(true)
@@ -32,7 +34,7 @@ const Board = () => {
             return;
         }
         const copyState = [...state]
-        copyState[index] = isXTurn ? "x": "o"
+        copyState[index] = isXTurn ? <span style={{color:"red"}}>x</span> :<span style={{color:"black"}}>0</span>
         setState(copyState)
         setIsXTurn(!isXTurn)
 

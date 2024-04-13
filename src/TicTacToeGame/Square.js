@@ -1,6 +1,13 @@
 import React from 'react'
 
 const Square = (props) => {
+  let color;
+  if (props.value === 'X') {
+    color = 'red';
+  } else if (props.value === 'O') {
+    color = 'black';
+  }
+  
   return (
     <div
     onClick={props.onClick}
@@ -13,7 +20,7 @@ const Square = (props) => {
          alignItems:"center"
         }}
    >
-      <h5>{props.value}</h5>
+      <h1 style={{color}}>{props.value}</h1>
     </div>
   )
 }
