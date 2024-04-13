@@ -34,7 +34,7 @@ const Board = () => {
             return;
         }
         const copyState = [...state]
-        copyState[index] = isXTurn ? <span style={{color:"red"}}>x</span> :<span style={{color:"blue"}}>0</span>
+        copyState[index] = isXTurn ? "x" :"o"
         setState(copyState)
         setIsXTurn(!isXTurn)
 

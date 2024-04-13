@@ -2,10 +2,10 @@ import React from 'react'
 
 const Square = (props) => {
   let color;
-  if (props.value === 'X') {
+  if (props.value === 'x') {
     color = 'red';
-  } else if (props.value === 'O') {
-    color = 'black';
+  } else if (props.value === 'o') {
+    color = 'blue';
   }
   
   return (
